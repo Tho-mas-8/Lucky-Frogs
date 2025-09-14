@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucky Frogs — 3‑Reel Slot</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Animated background: gold stars + green frogs -->
+  <div id="bg"></div>
+
+  <main class="container">
+    <header class="header">
+      <h1>🐸 Lucky Frogs <span>3‑Reel Slot</span></h1>
+      <div class="status">
+        <div class="balance">Balance: <span id="balance">0</span> credits</div>
+        <div class="bet">
+          <label for="betSelect">Bet:</label>
+          <select id="betSelect">
+            <option>1</option>
+            <option>2</option>
+            <option>5</option>
+            <option>10</option>
+            <option>20</option>
+            <option>50</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="bank">
+        <input id="depositAmount" type="number" min="1" step="1" placeholder="Amount" />
+        <button id="depositBtn" class="btn neon">Deposit</button>
+        <button id="resetBalanceBtn" class="btn ghost" title="Reset balance to 0">Reset</button>
+      </div>
+      <div class="actions">
+        <button id="spinBtn" class="btn primary">SPIN</button>
+        <label class="toggle" title="Auto‑spin until balance runs out">
+          <input id="autoSpin" type="checkbox"/>
+          <span>Auto</span>
+        </label>
+        <label class="toggle" title="Sound style">
+          <span>Sound</span>
+          <select id="soundSelect">
+            <option value="arcade">Arcade</option>
+            <option value="edm">EDM</option>
+            <option value="retro">Retro</option>
+          </select>
+        </label>
+        <button id="muteBtn" class="btn ghost" title="Toggle sound">🔊</button>
+      </div>
+    </section>
+
+    <section class="machine">
+      <div class="viewport">
+        <div class="reel" data-reel="0">
+          <div class="cell top"></div>
+          <div class="cell center"></div>
+          <div class="cell bottom"></div>
+        </div>
+        <div class="reel" data-reel="1">
+          <div class="cell top"></div>
+          <div class="cell center"></div>
+          <div class="cell bottom"></div>
+        </div>
+        <div class="reel" data-reel="2">
+          <div class="cell top"></div>
+          <div class="cell center"></div>
+          <div class="cell bottom"></div>
+        </div>
+      </div>
+      <div id="message" class="message">Place your bet and press SPIN</div>
+    </section>
+
+    <section class="panels">
+      <details open>
+        <summary>📜 Payout Table</summary>
+        <div id="payoutTable" class="payout"></div>
+      </details>
+
+      
+    </section>
+
+    <footer class="footer">
+      <medium>Made for Amateurs by Trevor 🐸 AKA the Legend!</medium>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
